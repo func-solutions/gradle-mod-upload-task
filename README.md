@@ -1,6 +1,7 @@
 # gradle-mod-upload-task
 Показан код для gradle.build для быстрой загрузки мода прямо на сервер
 
+```groovy
 plugins {
     id 'org.hidetake.ssh' version '2.10.1' // Добавляем нужный плагин для создания ssh-клиента
 }
@@ -31,3 +32,4 @@ task upload() {
 afterEvaluate {
     tasks.upload.dependsOn(tasks.bundle) // Делаем так, чтобы при таске upload, он перед этим собирал мод
 }
+```
